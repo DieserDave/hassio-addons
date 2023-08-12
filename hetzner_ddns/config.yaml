@@ -1,5 +1,6 @@
 name: "Hetzner DynDNS"
-description: "Wrapper for 'Docker Hetzner DDNS' from https://github.com/kutzilla             /docker-hetzner-ddns"
+description: "Wrapper for 'Docker Hetzner DDNS' from https://github.com/kutzilla/docker-hetzner-ddns"
+url: "https://github.com/kutzilla/docker-hetzner-ddns"
 version: "1.0.0.0"
 slug: "hetzner_ddns"
 init: false
