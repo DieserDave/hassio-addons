@@ -1,0 +1,27 @@
+name: "Hetzner DynDNS"
+description: "Wrapper for 'Docker Hetzner DDNS' from https://github.com/kutzilla             /docker-hetzner-ddns"
+url: "https://github.com/kutzilla/docker-hetzner-ddns"
+version: "1.0.0.b"
+slug: "hetzner_ddns"
+init: false
+boot: auto
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+options:
+  API_TOKEN: ""
+  ZONE_NAME: "world.org"
+  RECORD_TYPE: "A"
+  RECORD_NAME: "my"
+  CRON_EXPRESSION: "*/5 * * * *"
+  TTL: 300
+schema:
+  API_TOKEN: str
+  ZONE_NAME: str
+  RECORD_TYPE: str
+  RECORD_NAME: str?
+  CRON_EXPRESSION: str?
+  TTL: int?
