@@ -20,3 +20,7 @@ ports_description:
   80/tcp: "Web interface"
 webui: "http://[HOST]:[PORT:80]"
 panel_icon": "mdi:cloud-sync"
+options:
+  NEXTCLOUD_TRUSTED_DOMAINS:
+schema:
+  NEXTCLOUD_TRUSTED_DOMAINS: str
