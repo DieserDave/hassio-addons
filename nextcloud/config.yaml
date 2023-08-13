@@ -21,6 +21,6 @@ ports_description:
 webui: "http://[HOST]:[PORT:80]"
 panel_icon": "mdi:cloud-sync"
 options:
-  NEXTCLOUD_TRUSTED_DOMAINS:
+  NEXTCLOUD_TRUSTED_DOMAINS: ""
 schema:
   NEXTCLOUD_TRUSTED_DOMAINS: "str?"
