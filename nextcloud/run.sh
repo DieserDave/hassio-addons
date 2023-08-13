@@ -37,4 +37,14 @@ if [ -n "${NEXTCLOUD_TRUSTED_DOMAINS+x}" ]; then
     done
 fi
 
+if [ -n "${overwrite.cli.url+x}" ]; then
+    echo "Setting overwrite.cli.url…"
+    run_as "php $SHARE_DIR/html/occ config:system:set overwrite.cli.url --value ${overwrite.cli.url}"
+fi
+
+if [ -n "${overwriteprotocol+x}" ]; then
+    echo "Setting overwriteprotocol…"
+    run_as "php $SHARE_DIR/html/occ config:system:set overwriteprotocol --value ${overwriteprotocol}"
+fi
+
 /entrypoint.sh "$@"
