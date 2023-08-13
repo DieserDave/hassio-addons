@@ -9,4 +9,7 @@ if [ ! -d "${SHARE_DIR}" ]; then
     chmod -R g=u "${SHARE_DIR}"
 fi
 
+echo 'Hostname:'
+hostname
+
 /entrypoint.sh "$@"
