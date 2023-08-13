@@ -1,7 +1,7 @@
 name: "nextcloud"
 description: "nextcloud"
 url: "https://github.com/DieserDave/hassio-addons/"
-version: "27.0.2"
+version: "27.0.2b"
 slug: "nextcloud"
 init: false
 boot: auto
