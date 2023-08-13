@@ -1,5 +1,5 @@
-name: "nextcloud"
-description: "nextcloud"
+name: "Nextcloud"
+description: "Nextcloud for Home Assistant"
 url: "https://github.com/DieserDave/hassio-addons/"
 version: "27.0.2"
 slug: "nextcloud"
