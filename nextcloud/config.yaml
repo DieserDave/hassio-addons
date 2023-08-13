@@ -1,0 +1,22 @@
+name: "nextcloud"
+description: "nextcloud"
+url: "https://github.com/DieserDave/hassio-addons/"
+version: "27.0.2"
+slug: "nextcloud"
+init: false
+boot: auto
+startup: application
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+map:
+  - share:rw
+ports:
+  80/tcp: null
+ports_description:
+  80/tcp: "Web interface"
+webui: "http://[HOST]:[PORT:80]"
+panel_icon": "mdi:cloud-sync"
