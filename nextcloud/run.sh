@@ -5,6 +5,11 @@ echo 'Hostname:'
 hostname
 echo ''
 
+CONFIG_PATH=/data/options.json
+echo 'Starting with the following configuration:';
+jq --raw-output 'keys[] as $k | select(.[$k] != "" and .[$k] != null) | "\t" + ($k | ascii_upcase) + "=\"" + (.[$k]|tostring) + "\""' $CONFIG_PATH;
+eval $(jq --raw-output 'keys[] as $k | select(.[$k] != "" and .[$k] != null) | "export " + ($k | ascii_upcase) + "=\"" + (.[$k]|tostring) + "\""' $CONFIG_PATH);
+
 SHARE_DIR=/share/nextcloud
 if [ ! -d "${SHARE_DIR}" ]; then
     mkdir -p "${SHARE_DIR}"
@@ -30,10 +35,5 @@ if [ -n "${NEXTCLOUD_TRUSTED_DOMAINS+x}" ]; then
         NC_TRUSTED_DOMAIN_IDX=$((NC_TRUSTED_DOMAIN_IDX+1))
     done
 fi
-
-CONFIG_PATH=/data/options.json
-echo 'Starting with the following configuration:';
-jq --raw-output 'keys[] as $k | select(.[$k] != "" and .[$k] != null) | "\t" + ($k | ascii_upcase) + "=\"" + (.[$k]|tostring) + "\""' $CONFIG_PATH;
-eval $(jq --raw-output 'keys[] as $k | select(.[$k] != "" and .[$k] != null) | "export " + ($k | ascii_upcase) + "=\"" + (.[$k]|tostring) + "\""' $CONFIG_PATH);
 
 /entrypoint.sh "$@"
