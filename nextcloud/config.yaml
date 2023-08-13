@@ -23,4 +23,4 @@ panel_icon": "mdi:cloud-sync"
 options:
   NEXTCLOUD_TRUSTED_DOMAINS:
 schema:
-  NEXTCLOUD_TRUSTED_DOMAINS: str
+  NEXTCLOUD_TRUSTED_DOMAINS: str?
