@@ -22,9 +22,9 @@ webui: "http://[HOST]:[PORT:80]"
 panel_icon": "mdi:cloud-sync"
 options:
   NEXTCLOUD_TRUSTED_DOMAINS: ""
-  overwrite.cli.url: ""
+  overwrite_cli_url: ""
   overwriteprotocol: ""
 schema:
   NEXTCLOUD_TRUSTED_DOMAINS: "str?"
-  overwrite.cli.url: str?
+  overwrite_cli_url: str?
   overwriteprotocol: str?
