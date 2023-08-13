@@ -18,6 +18,7 @@ if [ ! -d "${SHARE_DIR}" ]; then
     chmod -R g=u "${SHARE_DIR}"
 fi
 
+user='www-data'
 run_as() {
     if [ "$(id -u)" = 0 ]; then
         su -p "$user" -s /bin/sh -c "$1"
