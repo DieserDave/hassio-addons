@@ -10,7 +10,8 @@ RUN  sed -i "s|/var/www|/share/nextcloud|g" /etc/apache2/sites-enabled/000-defau
   && sed -i "s|/var/www|/share/nextcloud|g" /etc/apache2/apache2.conf \
   && sed -i "s|/var/www|/share/nextcloud|g" /etc/apache2/conf-enabled/docker-php.conf \
   && sed -i "s|/var/www/html|/share/nextcloud/html|g" /entrypoint.sh \
-  && sed -i "s|/var/www/html|/share/nextcloud/html|g" /usr/src/nextcloud/config/autoconfig.php
+  && sed -i "s|/var/www/html|/share/nextcloud/html|g" /usr/src/nextcloud/config/autoconfig.php \
+  && sed -i "s|AllowOverride None|AllowOverride All|g" /etc/apache2/apache2.conf
 
 COPY run.sh /run.sh
 RUN chmod a+x /run.sh
