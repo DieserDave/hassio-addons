@@ -1,7 +1,7 @@
 name: "Nextcloud"
 description: "Nextcloud for Home Assistant"
 url: "https://github.com/DieserDave/hassio-addons/"
-version: "32.0.6"
+version: "33.0.1"
 slug: "nextcloud"
 init: false
 boot: auto
