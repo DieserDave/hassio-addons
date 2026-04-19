@@ -2,11 +2,8 @@
 
 set -a
 
-ZONE_NAME=$(bashio::config 'ZONE_NAME')
-API_TOKEN=$(bashio::config 'API_TOKEN')
-RECORD_TYPE=$(bashio::config 'RECORD_TYPE')
-RECORD_NAME=$(bashio::config 'RECORD_NAME')
-CRON_EXPRESSION=$(bashio::config 'CRON_EXPRESSION')
-TTL=$(bashio::config 'TTL')
+APIKEY=$(bashio::config 'APIKEY')
+ZONENAME=$(bashio::config 'ZONENAME')
+ARECORDNAMES__0=$(bashio::config 'ARECORDNAMES__0')
 
 exec /hetzner-ddns
