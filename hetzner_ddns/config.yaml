@@ -1,5 +1,5 @@
 name: "Hetzner DynDNS"
-description: "Wrapper for 'Docker Hetzner DDNS' from https://github.com/kutzilla/docker-hetzner-ddns"
+description: "Wrapper for 'Docker Hetzner DDNS' from https://github.com/mRy0/HetznerApiDynDNS/"
 url: "https://github.com/DieserDave/hassio-addons/"
 version: "1.0.0"
 slug: "hetzner_ddns"
@@ -12,16 +12,11 @@ arch:
   - armv7
   - i386
 options:
-  API_TOKEN: ""
-  ZONE_NAME: "world.org"
-  RECORD_TYPE: "A"
-  RECORD_NAME: "my"
-  CRON_EXPRESSION: "*/5 * * * *"
-  TTL: 300
+  APIKEY: ""
+  ZONENAME: "world.org"
+  ARECORDNAMES__0: "my"
 schema:
-  API_TOKEN: str
-  ZONE_NAME: str
-  RECORD_TYPE: str
-  RECORD_NAME: str?
-  CRON_EXPRESSION: str?
-  TTL: int?
+  APIKEY: str
+  ZONENAME: str
+  ARECORDNAMES__0: str?
+  
