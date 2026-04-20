@@ -1,6 +1,6 @@
 {
   "name": "Hetzner Console DNS",
-  "version": "0.0.0.1",
+  "version": "0.0.0.2",
   "slug": "hetzner_console_dns",
   "description": "A Home Assistant add-on to run the Hetzner Console DNS container.",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
@@ -15,6 +15,5 @@
     "APIKEY": "str",
     "ZONENAME": "str",
     "ARECORDNAMES__0": "str?"
-  },
-  "image": "raffi1337/hetzner-dyndns:latest"
+  }
 }
