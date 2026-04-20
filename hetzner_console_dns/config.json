@@ -15,5 +15,6 @@
     "APIKEY": "str",
     "ZONENAME": "str",
     "ARECORDNAMES__0": "str?"
-  }
+  },
+  "image": "raffi1337/hetzner-dyndns"
 }
